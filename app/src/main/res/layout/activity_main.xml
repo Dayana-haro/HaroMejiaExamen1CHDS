@@ -12,47 +12,48 @@
 
     <TextView
         android:id="@+id/txtTitulo"
-        android:layout_width="301dp"
-        android:layout_height="61dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="Cliente Servidor"
         android:textColor="#2C3E50"
-        android:textSize="40sp"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtResq"
-        android:layout_width="289dp"
-        android:layout_height="117dp"
-        android:background="@color/black"
+        android:layout_width="333dp"
+        android:layout_height="228dp"
+        android:background="@color/white"
         android:gravity="center"
-        android:padding="12dp"
+        android:padding="16dp"
         android:text="Respuesta del servidor aparecerá aquí"
         android:textColor="#34495E"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/bttComunicacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
         android:id="@+id/bttComunicacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:elevation="4dp"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="12dp"
+        android:backgroundTint="#3498DB"
+        android:elevation="6dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
         android:text="Consumir Servicio"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResq"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@id/txtResq"
+        app:layout_constraintVertical_bias="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
