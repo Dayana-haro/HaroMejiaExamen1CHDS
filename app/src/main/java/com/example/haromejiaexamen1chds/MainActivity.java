@@ -10,6 +10,9 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
     private TextView txtResq;
 
@@ -19,21 +22,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtResq = findViewById(R.id.txtResq);
-        Button sendRequestButton = findViewById(R.id.bttComunicacion);
-
-        sendRequestButton.setOnClickListener(v -> enviarSolicitud());
+        findViewById(R.id.bttComunicacion).setOnClickListener(v -> enviarSolicitud());
     }
 
     private void enviarSolicitud() {
-        String url = "http://10.10.13.47:3001/haromejia";
-
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        String url = "http://10.10.13.47:3001/nombres";
+        Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,
                 response -> {
-                    txtResq.setText(response);
+                    StringBuilder nombres = new StringBuilder();
+                    try {
+                        JSONArray jsonArray = new JSONArray(response);
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            nombres.append(jsonArray.getJSONObject(i).optString("nombre",
+                                            "Nombre no disponible"))
+                                    .append("\n");
+                        }
+                    } catch (Exception e) {
+                        nombres = new StringBuilder("Error al procesar la respuesta: " + e.getMessage());
+                    }
+                    txtResq.setText(nombres.toString());
                 },
-                error -> {
-                    txtResq.setText("Error en la solicitud: " + error.getMessage());
-                });
-        Volley.newRequestQueue(this).add(stringRequest);
+                error -> txtResq.setText("Error en la solicitud: " + (error.getMessage() != null ? error.getMessage() : "Error desconocido"))
+        ));
     }
 }
