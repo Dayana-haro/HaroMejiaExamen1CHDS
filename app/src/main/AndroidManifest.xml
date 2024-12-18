@@ -16,6 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityTrapecio"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityParalelogramo"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityPentagono"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCilindro"
+            android:exported="false" />
+        <activity
             android:name=".ActivityBibliografia"
             android:exported="false" />
         <activity

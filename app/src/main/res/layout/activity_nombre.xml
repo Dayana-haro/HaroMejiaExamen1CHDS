@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtResq"
+        android:id="@+id/txtResqLista"
         android:layout_width="333dp"
         android:layout_height="228dp"
         android:background="@color/white"
@@ -32,14 +32,14 @@
         android:text="Respuesta del servidor aparecerá aquí"
         android:textColor="#34495E"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/bttComunicacion"
+        app:layout_constraintBottom_toTopOf="@id/bttComunicacionLista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTitulo"
         app:layout_constraintVertical_bias="0.3" />
 
     <Button
-        android:id="@+id/bttComunicacion"
+        android:id="@+id/bttComunicacionLista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#3498DB"
@@ -53,7 +53,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtResq"
+        app:layout_constraintTop_toBottomOf="@id/txtResqLista"
         app:layout_constraintVertical_bias="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
