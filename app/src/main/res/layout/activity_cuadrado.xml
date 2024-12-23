@@ -5,6 +5,85 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondoacuarela"
     tools:context=".ActivityCuadrado">
+
+    <!-- Título de la actividad -->
+    <TextView
+        android:id="@+id/txtTituloCuadrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trinomio Cuadrado Perfecto"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo para Base -->
+
+    <ImageView
+        android:id="@+id/imagenParalelogramo"
+        android:layout_width="294dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="92dp"
+        android:src="@drawable/descarga"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNumero1Cuadrado"
+        android:layout_width="124dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:hint="Numero 1"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagenParalelogramo" />
+
+    <!-- Campo para Altura -->
+    <EditText
+        android:id="@+id/edtNumero2Cuadrado"
+        android:layout_width="124dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
+        android:hint="Numero 2"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtNumero1Cuadrado" />
+
+
+    <!-- Botón para Calcular -->
+    <Button
+        android:id="@+id/bttCalcularCuadrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/edtNumero2Cuadrado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Resultados -->
+    <TextView
+        android:id="@+id/txtResultadCuadrado"
+        android:layout_width="289dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="20dp"
+        android:text="Resultado:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bttCalcularCuadrado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

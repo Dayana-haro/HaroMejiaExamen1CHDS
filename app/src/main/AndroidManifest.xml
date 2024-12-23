@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityCuadrado"
+            android:exported="false" />
+        <activity
             android:name=".ActivityTrapecio"
             android:exported="false" />
         <activity

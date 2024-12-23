@@ -23,9 +23,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/txtTitul3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="2 + 8"
+        android:textColor="#2C3E50"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/txtResqSuma"
-        android:layout_width="333dp"
-        android:layout_height="228dp"
+        android:layout_width="321dp"
+        android:layout_height="204dp"
         android:background="@color/white"
         android:gravity="center"
         android:padding="16dp"

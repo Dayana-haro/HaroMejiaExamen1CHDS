@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Botón Bibliografía
-        Button bttBibliografia = findViewById(R.id.bttBibliografia);
+        Button bttBibliografia = findViewById(R.id.btnBibliografia);
         bttBibliografia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Botón Lista
-        Button bttLista = findViewById(R.id.bttLista);
+        Button bttLista = findViewById(R.id.btnLista);
         bttLista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Botón Suma
-        Button bttSuma = findViewById(R.id.bttSuma);
+        Button bttSuma = findViewById(R.id.btnSuma);
         bttSuma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Botón Suma con ingreso de número
-        Button bttSumaNum = findViewById(R.id.bttSumaNum);
+        Button bttSumaNum = findViewById(R.id.btnSumaNum);
         bttSumaNum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Botón Trapecio
-        Button bttTrapecio = findViewById(R.id.bttTrapecio);
+        Button bttTrapecio = findViewById(R.id.btnTrapecio);
         bttTrapecio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Botón Paralelogramo
-        Button bttParalelogramo = findViewById(R.id.bttParalelogramo);
+        Button bttParalelogramo = findViewById(R.id.btnParalelogramo);
         bttParalelogramo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Botón Pentágono
-        Button bttPentagono = findViewById(R.id.bttPentagono);
+        Button bttPentagono = findViewById(R.id.btnPentagono);
         bttPentagono.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,11 +85,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Botón Cilindro
-        Button bttCilindro = findViewById(R.id.bttCilindro);
+        Button bttCilindro = findViewById(R.id.btnCilindro);
         bttCilindro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ActivityCilindro.class);
+                startActivity(intent);
+            }
+        });
+        Button bttCuadrado = findViewById(R.id.btnCuadradoTrinomio);
+        bttCuadrado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ActivityCuadrado.class);
                 startActivity(intent);
             }
         });

@@ -35,7 +35,7 @@ public class ActivitySuma extends AppCompatActivity {
     }
 
     private void enviarSolicitud() {
-        String url = "http://192.168.1.7:3001/suma";
+        String url = "http://10.10.13.47:3001/suma";
 
         // Crear y agregar la solicitud a la cola de Volley
         Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,

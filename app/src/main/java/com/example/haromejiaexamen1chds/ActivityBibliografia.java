@@ -30,7 +30,7 @@ public class ActivityBibliografia extends AppCompatActivity {
     }
 
     private void enviarSolicitud() {
-        String url = "http://192.168.1.7:3001/dayana";
+        String url = "http://10.10.13.47:3001/dayana";
 
         // Crear y agregar la solicitud a la cola de Volley
         Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,

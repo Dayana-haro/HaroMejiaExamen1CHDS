@@ -26,7 +26,7 @@ public class ActivityNombre extends AppCompatActivity {
     }
 
     private void enviarSolicitud() {
-        String url = "http://192.168.1.7:3001/nombres";
+        String url = "http://10.10.13.47:3001/nombres";
         Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,
                 response -> {
                     StringBuilder nombres = new StringBuilder();

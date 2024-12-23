@@ -45,7 +45,7 @@ public class ActivityParalelogramo extends AppCompatActivity {
             return;
         }
 
-        String url = "http://192.168.1.7:3001/paralelogramo/" + base + "/" + altura + "/" + lado;
+        String url = "http://10.10.13.47:3001/paralelogramo/" + base + "/" + altura + "/" + lado;
 
         // Crear y agregar la solicitud a la cola de Volley
         Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,

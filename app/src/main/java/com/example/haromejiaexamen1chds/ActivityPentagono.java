@@ -46,7 +46,7 @@ public class ActivityPentagono extends AppCompatActivity {
         }
 
         // Construir la URL con los parámetros
-        String url = "http://192.168.1.7:3001/pentagono/" + lado + "/" + apotema;
+        String url = "http://10.10.13.47:3001/pentagono/" + lado + "/" + apotema;
 
         // Crear la solicitud Volley para obtener los resultados
         Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,

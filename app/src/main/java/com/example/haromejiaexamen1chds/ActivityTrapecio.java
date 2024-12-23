@@ -53,7 +53,7 @@ public class ActivityTrapecio extends AppCompatActivity {
             return;
         }
 
-        String url = "http://192.168.1.7:3001/trapecio/" + baseMayor + "/" + baseMenor + "/" + altura + "/" + lado1 + "/" + lado2;
+        String url = "http://10.10.13.47:3001/trapecio/" + baseMayor + "/" + baseMenor + "/" + altura + "/" + lado1 + "/" + lado2;
 
         // Crear y agregar la solicitud a la cola de Volley
         Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,
